@@ -3,7 +3,7 @@ import clipboard from 'clipboardy'
 import { generateSecret } from "./secret"
 import { generateImage } from "./internal"
 
-const sessionSecret: string = "secret"
+const sessionSecret: string = generateSecret() 
 
 const app = new Elysia()
     .all("/", () => "Nothing here!")
